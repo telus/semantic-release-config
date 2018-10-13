@@ -16,10 +16,6 @@ commands:
 
   install:
     steps:
-      - restore_cache:
-          keys:
-            - dependencies-{{ checksum "package-lock.json" }}
-
       - run:
           name: Setup .npmrc
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
@@ -27,10 +23,6 @@ commands:
       - run:
           name: Install dependencies
           command: npm ci
-
-      - save_cache:
-          key: dependencies-{{ checksum "package-lock.json" }}
-          paths: [ node_modules ]
 
 jobs:
   release:
