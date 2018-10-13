@@ -13,6 +13,35 @@ repository:
   allow_merge_commit: false
   allow_rebase_merge: true
 
+
+teams:
+  - name: architecture-support
+    permission: admin
+
+branches:
+  - name: master
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        dismiss_stale_reviews: true
+        require_code_owner_reviews: true
+        dismissal_restrictions:
+          users: []
+          teams:
+            - architecture-support
+
+      required_status_checks:
+        strict: true
+        contexts:
+          - 'ci/circleci: Build Error'
+
+      enforce_admins: true
+
+      restrictions:
+        users: []
+        teams:
+          - architecture-support
+
 labels:
   - name: bug
     description: Something isn't working
@@ -69,28 +98,3 @@ labels:
   - name: on hold
     description: No work planned on this for now
     color: D2DAE1
-
-
-branches:
-  - name: master
-    protection:
-      required_pull_request_reviews:
-        required_approving_review_count: 1
-        dismiss_stale_reviews: true
-        require_code_owner_reviews: true
-        dismissal_restrictions:
-          users: []
-          teams:
-            - architecture-support
-
-      required_status_checks:
-        strict: true
-        contexts:
-          - 'ci/circleci: Build Error'
-
-      enforce_admins: true
-
-      restrictions:
-        users: []
-        teams:
-          - architecture-support
