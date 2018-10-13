@@ -29,3 +29,6 @@ workflows:
     jobs:
       - release:
           context: npm-library
+          filters:
+            branches:
+              only: master
