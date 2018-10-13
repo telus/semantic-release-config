@@ -9,7 +9,12 @@
   },
   "license": "MIT",
   "main": "index.js",
-  "keywords": ["telus","semantic-release","github","npm"],
+  "keywords": [
+    "telus",
+    "semantic-release",
+    "github",
+    "npm"
+  ],
   "engines": {
     "node": ">=8"
   },
