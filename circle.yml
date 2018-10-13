@@ -17,7 +17,8 @@ commands:
   install:
     steps:
       - restore_cache:
-          keys: [ dependencies-{{ checksum "package-lock.son" }} ] }
+          keys:
+            - dependencies-{{ checksum "package-lock.json" }}
 
       - run:
           name: Setup .npmrc
@@ -28,7 +29,7 @@ commands:
           command: npm ci
 
       - save_cache:
-          key: dependencies-{{ checksum "package-lock.son" }}
+          key: dependencies-{{ checksum "package-lock.json" }}
           paths: [ node_modules ]
 
 jobs:
@@ -45,5 +46,4 @@ workflows:
   run:
     jobs:
       - release:
-          context: telus npm
-          requires: [ build ]
+          context: npm-library
