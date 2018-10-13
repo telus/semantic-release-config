@@ -79,6 +79,7 @@ branches:
         dismiss_stale_reviews: true
         require_code_owner_reviews: true
         dismissal_restrictions:
+          users: []
           teams:
             - architecture-support
 
@@ -88,5 +89,6 @@ branches:
       enforce_admins: true
 
       restrictions:
+        users: []
         teams:
           - architecture-support
