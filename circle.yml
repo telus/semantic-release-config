@@ -1,0 +1,49 @@
+version: 2.1
+
+executors:
+  app:
+    working_directory: /src
+
+    docker:
+      - image: node:alpine
+
+commands:
+  setup:
+    steps:
+      - run:
+          name: Setup Container
+          command: "apk add --update --no-cache ca-certificates git openssh g++ make python"
+
+  install:
+    steps:
+      - restore_cache:
+          keys: [ dependencies-{{ checksum "package-lock.son" }} ] }
+
+      - run:
+          name: Setup .npmrc
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+
+      - run:
+          name: Install dependencies
+          command: npm ci
+
+      - save_cache:
+          key: dependencies-{{ checksum "package-lock.son" }}
+          paths: [ node_modules ]
+
+jobs:
+  release:
+    executor: app
+    steps:
+      - setup
+      - checkout
+      - install
+      - run: npx semantic-release
+
+workflows:
+  version: 2
+  run:
+    jobs:
+      - release:
+          context: telus npm
+          requires: [ build ]
