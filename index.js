@@ -1,6 +1,5 @@
 module.exports = {
   verifyConditions: [
-    '@semantic-release/git',
     '@semantic-release/github',
     '@semantic-release/npm'
   ],
@@ -14,8 +13,7 @@ module.exports = {
   ],
 
   prepare: [
-    '@semantic-release/npm',
-    '@semantic-release/git'
+    '@semantic-release/npm'
   ],
 
   publish: [
