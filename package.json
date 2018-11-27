@@ -19,6 +19,7 @@
     "node": ">=8"
   },
   "files": [
+    "github/*",
     "index.js"
   ],
   "bugs": {
