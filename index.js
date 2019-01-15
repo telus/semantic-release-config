@@ -5,7 +5,13 @@ module.exports = {
   ],
 
   analyzeCommits: [
-    '@semantic-release/commit-analyzer'
+    '@semantic-release/commit-analyzer',
+    {
+      preset: 'angular',
+      parserOpts: {
+        noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES']
+      }
+    }
   ],
 
   generateNotes: [
