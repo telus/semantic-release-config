@@ -34,16 +34,16 @@
   "dependencies": {
     "@semantic-release/commit-analyzer": "^6.1.0",
     "@semantic-release/github": "^5.2.10",
-    "@semantic-release/npm": "^5.1.7",
+    "@semantic-release/npm": "^5.1.9",
     "@semantic-release/release-notes-generator": "^7.1.4",
     "eslint": "^5.16.0",
-    "semantic-release": "^15.13.12"
+    "semantic-release": "^15.13.14"
   },
   "devDependencies": {
     "@telus/eslint-config": "^2.0.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jest": "^22.5.1",
+    "eslint-plugin-jest": "^22.6.4",
     "eslint-plugin-jsx": "0.0.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0"
