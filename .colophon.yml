@@ -28,10 +28,10 @@ contacts:
     email: samantha.bezerra_vale@telus.com
     github: karlasamantha
 
-environment:
-  - type: git
-    title: Source Code
+references:
+  - title: Source Code
+    description: GitHub for PRs and issues
     uri: https://github.com/telus/semantic-release-config
-  - type: npm
-    title: NPM package
+  - title: NPM package
+    description: Package repository
     uri: https://www.npmjs.com/package/@telus/semantic-release-config
