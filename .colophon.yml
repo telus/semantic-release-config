@@ -28,7 +28,7 @@ contacts:
     email: samantha.bezerra_vale@telus.com
     github: karlasamantha
 
-environment:
+references:
   - type: git
     title: Source Code
     uri: https://github.com/telus/semantic-release-config
