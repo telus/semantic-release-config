@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@telus/eslint-config": "^2.0.1",
-    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb": "^18.0.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jest": "^22.6.4",
     "eslint-plugin-jsx": "0.0.2",
