@@ -26,26 +26,38 @@
     "url": "https://github.com/telus/semantic-release-config/issues"
   },
   "scripts": {
-    "lint:deps": "npx david --error404 --errorSCM --errorDepType",
+    "preinstall": "npx npm-force-resolutions",
     "lint:ec": "npx editorconfig-checker .",
     "lint:js": "npx eslint .",
-    "lint": "npx npm-run-all -p lint:*"
+    "lint": "npx npm-run-all -p lint:*",
+    "release:dryrun": "npx semantic-release --dry-run --branch $(git describe --contains --all HEAD)",
+    "release": "npx semantic-release",
+    "test": "echo \"No tests\""
   },
   "dependencies": {
-    "@semantic-release/commit-analyzer": "^6.1.0",
-    "@semantic-release/github": "^5.2.10",
-    "@semantic-release/npm": "^5.1.9",
-    "@semantic-release/release-notes-generator": "^7.1.4",
-    "eslint": "^5.16.0",
-    "semantic-release": "^15.13.14"
+    "@semantic-release/commit-analyzer": "^6.3.2",
+    "@semantic-release/github": "^5.5.5",
+    "@semantic-release/npm": "^5.3.4",
+    "@semantic-release/release-notes-generator": "^7.3.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-angular": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@telus/prettier-config": "^1.0.3",
+    "@telus/remark-config": "^1.2.0",
     "@telus/eslint-config": "^2.0.1",
-    "eslint-config-airbnb": "^17.1.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jest": "^22.6.4",
-    "eslint-plugin-jsx": "0.0.2",
+    "eslint-plugin-jest": "^23.0.2",
+    "eslint-plugin-jsx": "0.1.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0"
+    "eslint-plugin-react": "^7.13.0",
+    "editorconfig-checker": "^2.2.0",
+    "husky": "^3.0.9"
+  },
+  "resolutions": {
+    "https-proxy-agent": "^2.2.3"
   }
 }

@@ -1,4 +1,4 @@
-# Semantic Release Config 
+# Semantic Release Config
 
 [![version][npm-image]][npm-url] [![Build Status][circle-image]][circle-url]
 
@@ -8,7 +8,7 @@
 
 ###### `.releaserc`
 
-```
+```json
 {
   "extends": "@telus/semantic-release-config"
 }
@@ -20,7 +20,7 @@ npx semantic-release
 ```
 
 ---
-> Github: [@telus](https://github.com/telus) &bull; 
+> Github: [@telus](https://github.com/telus) &bull;
 > Twitter: [@telusdigital](https://twitter.com/telusdigital)
 
 [circle-url]: https://circleci.com/gh/telus/semantic-release-config
