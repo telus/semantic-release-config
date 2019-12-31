@@ -34,26 +34,26 @@
     "test": "echo \"No tests\""
   },
   "dependencies": {
-    "@semantic-release/commit-analyzer": "^6.3.2",
+    "@semantic-release/commit-analyzer": "^6.3.3",
     "@semantic-release/github": "^5.5.5",
-    "@semantic-release/npm": "^5.3.4",
-    "@semantic-release/release-notes-generator": "^7.3.2"
+    "@semantic-release/npm": "^5.3.5",
+    "@semantic-release/release-notes-generator": "^7.3.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-angular": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
+    "@telus/eslint-config": "^2.0.1",
     "@telus/prettier-config": "^1.0.3",
     "@telus/remark-config": "^1.2.0",
-    "@telus/eslint-config": "^2.0.1",
-    "eslint": "^6.6.0",
+    "editorconfig-checker": "^2.2.0",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^23.0.2",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jest": "^23.2.0",
     "eslint-plugin-jsx": "0.1.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.16.0",
-    "editorconfig-checker": "^2.2.0",
-    "husky": "^3.0.9"
+    "eslint-plugin-react": "^7.17.0",
+    "husky": "^3.1.0"
   }
 }
