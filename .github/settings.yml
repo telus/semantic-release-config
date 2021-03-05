@@ -31,9 +31,6 @@ branches:
 
       required_status_checks:
         strict: true
-        contexts:
-          - 'ci/circleci: build'
-          - 'ci/circleci: lint'
 
       enforce_admins: true
 
@@ -67,7 +64,7 @@ labels:
     description: New feature or request
     color: 5EBEFF
 
-  - name: optimizaiton
+  - name: optimization
     description: Performance or Code Optimization
     color: 5EBEFF
 

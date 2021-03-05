@@ -1,37 +1,31 @@
-version: 2.0
+version: 4.0
 
 id: semantic-release-config
+uid: 152829183
 
 about:
-  title: semantic-release-config
+  title: Semantic Release Config
+  alias: semantic-release-config
   description: TELUS flavor of semantic-release, to automate the package release workflow
+  type: 'module'
+  target: npm
 
 contacts:
-  - type: Project Manager
-    name: Natasha Lander
-    email: natasha.lander@telus.com
-    github: NatashaLander
-  - type: Developer
-    name: Kyle Spaans
-    email: kyle.spaans@telus.com
-    github: kspaans
-  - type: Developer
-    name: Ruxandra Fediuc
-    email: ruxandra.fediuc@telus.com
-    github: ruxandrafed
-  - type: Developer
-    name: Mauricio Mercado
-    email: mauricio.mercado@telus.com
-    github: maumercado
-  - type: Developer
-    name: Samantha Vale
-    email: samantha.bezerra_vale@telus.com
-    github: karlasamantha
+  - type: Project Owner
+    name: Shimona Jain
+    email: shimona.jain@telus.com
+
+  - type: Team
+    name: ptt-ti
+    members_uri: https://github.com/orgs/telus/teams/ptt-ti/members
+    repositories_uri: https://github.com/orgs/telus/teams/ptt-ti/repositories
+
+environments:
+  - type: production
+    title: NPM Package
+    uri: https://www.npmjs.com/package/@telus/semantic-release-config
 
 references:
-  - title: Source Code
-    description: GitHub for PRs and issues
+  - title: git
+    description: Source Code
     uri: https://github.com/telus/semantic-release-config
-  - title: NPM package
-    description: Package repository
-    uri: https://www.npmjs.com/package/@telus/semantic-release-config
