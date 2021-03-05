@@ -26,3 +26,4 @@ jobs:
 
       - name: Check linting
         run: npm run lint
+        
