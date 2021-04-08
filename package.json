@@ -26,9 +26,10 @@
     "url": "https://github.com/telus/semantic-release-config/issues"
   },
   "scripts": {
+    "lint:deps": "npx updated",
     "lint:ec": "npx editorconfig-checker",
     "lint:js": "telus-standard --verbose",
-    "lint": "npx npm-run-all -p lint:*",
+    "lint": "npm-run-all -p lint:*",
     "release:dryrun": "npx semantic-release --dry-run --branch $(git describe --contains --all HEAD)",
     "release": "npx semantic-release",
     "test": "echo \"No tests\""
