@@ -33,6 +33,7 @@
     "fix:js": "telus-standard --verbose --fix",
     "fix:md": "npm run lint:md -- -o",
     "fix:deps": "npm run lint:deps -- --update",
+    "test": "echo \"No tests\"",
     "release:dryrun": "npx semantic-release --dry-run --branch $(git describe --contains --all HEAD)",
     "release": "npx semantic-release"
   },
@@ -51,6 +52,6 @@
     "@telus/remark-config": "^2.0.0",
     "@telus/telus-standard": "^2.0.4",
     "editorconfig-checker": "^4.0.2",
-    "husky": "^3.1.0"
+    "husky": "^6.0.0"
   }
 }
