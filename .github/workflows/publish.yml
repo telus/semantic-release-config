@@ -22,17 +22,14 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      - run: npm run test
-      - run: npm run lint
-
       - name: Dryrun release
         run: npm run release:dryrun
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Semantic release
-        run: npm run release
         if: github.ref == 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+        run: npm run release
