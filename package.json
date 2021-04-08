@@ -28,7 +28,6 @@
   "scripts": {
     "lint:ec": "npx editorconfig-checker",
     "lint:js": "telus-standard --verbose",
-    "lint:deps": "npx updated",
     "lint": "npx npm-run-all -p lint:*",
     "release:dryrun": "npx semantic-release --dry-run --branch $(git describe --contains --all HEAD)",
     "release": "npx semantic-release",
