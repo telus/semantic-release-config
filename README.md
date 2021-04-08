@@ -8,7 +8,7 @@
 
 ###### `.releaserc`
 
-```
+```bash
 {
   "extends": "@telus/semantic-release-config"
 }
