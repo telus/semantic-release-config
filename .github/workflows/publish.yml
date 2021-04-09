@@ -25,7 +25,7 @@ jobs:
       - name: Dryrun release
         run: npm run release:dryrun
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Semantic release
         run: npm run release
