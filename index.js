@@ -1,7 +1,8 @@
 module.exports = {
   verifyConditions: [
     '@semantic-release/github',
-    '@semantic-release/npm'
+    '@semantic-release/npm',
+    '@semantic-release/git'
   ],
 
   analyzeCommits: [
