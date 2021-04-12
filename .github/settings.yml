@@ -28,6 +28,7 @@ branches:
           users: []
           teams:
             - architecture-support
+            - ptt-ti
 
       required_status_checks:
         strict: true
@@ -38,6 +39,7 @@ branches:
         users: []
         teams:
           - architecture-support
+          - ptt-ti
 
 labels:
   - name: bug
