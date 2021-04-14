@@ -16,6 +16,8 @@ repository:
 teams:
   - name: architecture-support
     permission: admin
+  - name: ptt-ti
+    permission: maintain
 
 branches:
   - name: master
