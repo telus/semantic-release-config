@@ -13,8 +13,6 @@ jobs:
     steps:
       - name: Check out the code
         uses: actions/checkout@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Setup node
         uses: actions/setup-node@v1
@@ -23,6 +21,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Check linting
         run: npm run lint
