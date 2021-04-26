@@ -50,7 +50,7 @@
     "@commitlint/config-conventional": "^12.1.1",
     "@telus/prettier-config": "^2.0.0",
     "@telus/remark-config": "^2.0.0",
-    "@telus/telus-standard": "^2.0.4",
+    "@telus/telus-standard": "^3.0.0",
     "editorconfig-checker": "^4.0.2",
     "husky": "^6.0.0"
   }
