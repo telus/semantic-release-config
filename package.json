@@ -25,14 +25,12 @@
   },
   "scripts": {
     "lint:audit": "npx audit-ci@4.1.0 --config .audit-ci.json",
-    "lint:deps": "npx updated --ignore=husky",
     "lint:ec": "npx editorconfig-checker",
     "lint:js": "npx @telus/telus-standard --verbose",
     "lint:md": "npx remark-cli --quiet --frail .",
     "lint": "npm-run-all -p -c -l lint:*",
-    "fix:js": "telus-standard --verbose --fix",
+    "fix:js": "npx @telus/telus-standard --verbose --fix",
     "fix:md": "npm run lint:md -- -o",
-    "fix:deps": "npm run lint:deps -- --update",
     "test": "echo \"No tests\"",
     "release:dryrun": "npx semantic-release --dry-run --branch $(git describe --contains --all HEAD)",
     "release": "npx semantic-release"
@@ -45,11 +43,11 @@
     "npm-run-all": "^4.1.5"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-angular": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
-    "@telus/prettier-config": "^3.0.2",
-    "@telus/remark-config": "^2.0.2",
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-angular": "^13.2.0",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@telus/prettier-config": "^3.0.3",
+    "@telus/remark-config": "^2.0.3",
     "editorconfig-checker": "^4.0.2",
     "husky": "^4.3.8"
   }
