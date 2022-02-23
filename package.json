@@ -46,8 +46,8 @@
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-angular": "^16.0.0",
     "@commitlint/config-conventional": "^16.0.0",
-    "@telus/prettier-config": "^3.0.6",
-    "@telus/remark-config": "^2.0.6",
+    "@telus/prettier-config": "^3.0.5",
+    "@telus/remark-config": "^2.0.5",
     "editorconfig-checker": "^4.0.2",
     "husky": "^4.3.8"
   }
