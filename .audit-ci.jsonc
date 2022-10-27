@@ -1,5 +1,7 @@
 {
   "moderate": true,
-  "allowlist": [],
+  "allowlist": [
+    "GHSA-f8q6-p94x-37v3"
+  ],
   "registry": "https://registry.npmjs.org"
 }
