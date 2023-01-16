@@ -48,7 +48,7 @@
     "@commitlint/config-conventional": "^17.3.0",
     "@telus/prettier-config": "^3.2.3",
     "@telus/remark-config": "^2.2.4",
-    "editorconfig-checker": "^4.0.2",
+    "editorconfig-checker": "^5.0.0",
     "husky": "^4.3.8"
   }
 }
