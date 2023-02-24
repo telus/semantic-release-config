@@ -32,8 +32,8 @@
     "fix:js": "npx @telus/telus-standard --verbose --fix",
     "fix:md": "npm run lint:md -- -o",
     "test": "echo \"No tests\"",
-    "release:dryrun": "npx semantic-release --dry-run --branch $(git describe --contains --all HEAD)",
-    "release": "npx semantic-release"
+    "release:dryrun": "npx semantic-release@19.0.5 --dry-run --branch $(git describe --contains --all HEAD)",
+    "release": "npx semantic-release@19.0.5"
   },
   "dependencies": {
     "@semantic-release/commit-analyzer": "^9.0.2",
