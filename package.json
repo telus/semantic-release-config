@@ -14,7 +14,7 @@
     "semantic-release"
   ],
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "files": [
     "github/*",
@@ -38,7 +38,7 @@
   "dependencies": {
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/github": "^8.0.7",
-    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/npm": "^9.0.2",
     "@semantic-release/release-notes-generator": "^10.0.3",
     "npm-run-all": "^4.1.5"
   },
@@ -48,7 +48,7 @@
     "@commitlint/config-conventional": "^17.3.0",
     "@telus/prettier-config": "^3.2.3",
     "@telus/remark-config": "^2.2.4",
-    "editorconfig-checker": "^4.0.2",
+    "editorconfig-checker": "^5.0.1",
     "husky": "^4.3.8"
   }
 }
