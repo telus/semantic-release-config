@@ -1,7 +1,7 @@
 {
   "moderate": true,
   "allowlist": [
-    "GHSA-f8q6-p94x-37v3"
+    "GHSA-rc47-6667-2j5j|http-cache-semantics"
   ],
   "registry": "https://registry.npmjs.org"
 }
