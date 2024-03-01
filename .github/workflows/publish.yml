@@ -5,6 +5,13 @@ on:
     branches:
       - main
 
+permissions:
+  packages: write # to be able to write to GitHub packages
+  contents: write # to be able to publish a GitHub release
+  issues: write # to be able to comment on released issues
+  pull-requests: write # to be able to comment on released pull requests
+  id-token: write # to enable use of OIDC for npm provenance
+
 jobs:
   publish:
     name: Publish package
@@ -18,14 +25,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          scope: '@telus'
+          registry-url: 'https://npm.pkg.github.com'
 
       - name: Install deps
         run: npm ci
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.CIO_GITHUB_PACKAGES_READ }}
 
       - name: Publish package
         env:
-          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run release
