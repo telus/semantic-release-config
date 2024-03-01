@@ -3,7 +3,7 @@
 
 # Semantic Release Config
 
-[Semantic Release][https://github.com/semantic-release/semantic-release] shareable config
+[Semantic Release](https://github.com/semantic-release/semantic-release) shareable config
 
 ## Usage
 
