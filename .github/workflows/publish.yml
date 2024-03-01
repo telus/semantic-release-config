@@ -21,7 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup node
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -31,7 +31,11 @@ jobs:
       - name: Install deps
         run: npm ci
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.CIO_GITHUB_PACKAGES_READ }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish package
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish package
         env:
